@@ -8,15 +8,26 @@ const ContextProvider = props => {
 
   const [activePath, setActivePath] = useState(path);
   const [category, setCategory] = useState("");
+  const [cart, setCart] = useState([]);
 
-  console.log("the category in Context: " + category);
+  const addToCart = p => {
+    setCart([...cart, p]);
+  };
+
   useEffect(() => {
     console.log("In use effect of Context: ");
   }, []);
 
   return (
     <appContext.Provider
-      value={{ activePath, setActivePath, category, setCategory }}
+      value={{
+        activePath,
+        setActivePath,
+        category,
+        setCategory,
+        cart,
+        addToCart
+      }}
     >
       {props.children}
     </appContext.Provider>

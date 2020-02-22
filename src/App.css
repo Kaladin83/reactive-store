@@ -172,6 +172,19 @@ body {
   grid-gap: 0.7rem;
 }
 
+.product-details {
+  position: absolute;
+  width: 380px;
+  bottom: 0;
+  height: 0px;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  background-color: rgba(227, 226, 245, 0.8);
+  z-index: 2;
+}
+
 .product-card {
   position: relative;
   max-height: 280px;
@@ -183,10 +196,81 @@ body {
   justify-content: center;
 }
 
+.product-card:hover .product-details {
+  height: 100px;
+  top: initial;
+  bottom: 0;
+}
+
+.product-card:hover .product-description {
+  visibility: hidden;
+}
+
 .product-card img {
   height: 280px;
   width: 380px;
   object-fit: cover;
+}
+
+.order {
+  visibility: hidden;
+  position: absolute;
+  display: inline-block;
+  bottom: 5px;
+  width: 380px;
+}
+
+.order-amount {
+  position: absolute;
+  display: inline-block;
+  bottom: 0px;
+  right: 60px;
+}
+
+.product-card:hover .order {
+  visibility: visible;
+}
+
+.order-amount input {
+  width: 30px;
+  height: 25px;
+  text-align: center;
+}
+
+.order-amount .arrows {
+  height: 31px;
+  font-size: 19px;
+  border: 0px;
+  vertical-align: middle;
+  background-color: transparent;
+}
+
+.arrows .arrow-left {
+  padding-right: 3px;
+}
+
+.arrows .arrow-right {
+  padding-left: 3px;
+}
+
+.add-to-cart {
+  position: absolute;
+  background-color: transparent;
+  border: 0ch;
+  margin-left: 15px;
+  padding-left: 5px;
+  font-size: 21px;
+  bottom: 2px;
+  right: 5px;
+}
+
+.total-sum {
+  position: absolute;
+  left: 10px;
+  bottom: 0.2px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Unna", serif;
 }
 
 .product-description {
