@@ -20,7 +20,7 @@ export const data = [
   {
     id: 1,
     name: "Cranberry Glazed Ham",
-    category: "deli",
+    category: "Deli",
     price: "12.00$",
     sale: "11.00$",
     image: require("./img/products/cranberry_Glazed_ham.jpg"),
@@ -29,7 +29,7 @@ export const data = [
   {
     id: 2,
     name: "Maple Glazed Ham",
-    category: "deli",
+    category: "Deli",
     price: "10.50$",
     sale: "0$",
     image: require("./img/products/Maple_Glazed_Ham.jpg"),
@@ -38,7 +38,7 @@ export const data = [
   {
     id: 3,
     name: "Hungarian Salami",
-    category: "deli",
+    category: "Deli",
     price: "11.50$",
     sale: "0$",
     image: require("./img/products/hungarian_salami.jpg"),
@@ -47,7 +47,7 @@ export const data = [
   {
     id: 4,
     name: "Garlic Pork Sausage",
-    category: "deli",
+    category: "Deli",
     price: "8.50$",
     sale: "8.00$",
     image: require("./img/products/garlic_pork_sausage.jpg"),
@@ -56,7 +56,7 @@ export const data = [
   {
     id: 5,
     name: "Mastard and Papper Pastrami",
-    category: "deli",
+    category: "Deli",
     price: "12.00$",
     sale: "0$",
     image: require("./img/products/Mastard-and_papper_pastrami.jpg"),
@@ -65,7 +65,7 @@ export const data = [
   {
     id: 6,
     name: "Pork Pepperoni",
-    category: "deli",
+    category: "Deli",
     price: "12.00$",
     sale: "0$",
     image: require("./img/products/pork_pepperoni.png"),
@@ -74,7 +74,7 @@ export const data = [
   {
     id: 7,
     name: "Finocchiono Salami",
-    category: "deli",
+    category: "Deli",
     price: "14.00$",
     sale: "0$",
     image: require("./img/products/Salami_Finocchiono.jpg"),
@@ -83,7 +83,7 @@ export const data = [
   {
     id: 8,
     name: "Picante Dry Cured Salami",
-    category: "deli",
+    category: "Deli",
     price: "15.00$",
     sale: "0$",
     image: require("./img/products/Salami_Picante_dty_cured_spicy.jpg"),
@@ -92,7 +92,7 @@ export const data = [
   {
     id: 9,
     name: "Smoked Ham",
-    category: "deli",
+    category: "Deli",
     price: "10.00$",
     sale: "9.50$",
     image: require("./img/products/Smoked-ham.jpg"),
@@ -101,7 +101,7 @@ export const data = [
   {
     id: 10,
     name: "smoked Brisket Pastrami",
-    category: "deli",
+    category: "Deli",
     price: "11.00$",
     sale: "0$",
     image: require("./img/products/smoked_brisket_pastrami.jpg"),
@@ -110,7 +110,7 @@ export const data = [
   {
     id: 11,
     name: "smoked Corned-beef Brisket Pastrami",
-    category: "deli",
+    category: "Deli",
     price: "12.00$",
     sale: "0$",
     image: require("./img/products/smoked_corned_beef_brisket_pastrami.jpg"),
@@ -119,7 +119,7 @@ export const data = [
   {
     id: 12,
     name: "smoked Country Ham",
-    category: "deli",
+    category: "Deli",
     price: "10.50$",
     sale: "0$",
     image: require("./img/products/smoked_Country_Ham.jpg"),
@@ -128,7 +128,7 @@ export const data = [
   {
     id: 13,
     name: "Sous Vide Que Pastrami",
-    category: "deli",
+    category: "Deli",
     price: "12.00$",
     sale: "0$",
     image: require("./img/products/sous_vide_que_pastrami.jpg"),
@@ -137,7 +137,7 @@ export const data = [
   {
     id: 14,
     name: "Wild Boar Salami",
-    category: "deli",
+    category: "Deli",
     price: "17.50$",
     sale: "15.50$",
     image: require("./img/products/wild-boar_salami.jpg"),
@@ -146,7 +146,7 @@ export const data = [
   {
     id: 15,
     name: "5 year aged Cheddar",
-    category: "dairy products",
+    category: "Dairy products",
     price: "10.00$",
     sale: "0$",
     image: require("./img/products/5_year_aged_cheddar.png"),
@@ -155,7 +155,7 @@ export const data = [
   {
     id: 16,
     name: "Bleu de Gex",
-    category: "dairy products",
+    category: "Dairy products",
     price: "13.00$",
     sale: "12.50$",
     image: require("./img/products/Bleu_de_Gex_cheese.jpg"),
@@ -164,7 +164,7 @@ export const data = [
   {
     id: 17,
     name: "Camembert",
-    category: "dairy products",
+    category: "Dairy products",
     price: "14.00$",
     sale: "0$",
     image: require("./img/products/camembert_cheese.jpg"),
@@ -173,7 +173,7 @@ export const data = [
   {
     id: 18,
     name: "Dutch Blue Gouda",
-    category: "dairy products",
+    category: "Dairy products",
     price: "17.00$",
     sale: "16.00$",
     image: require("./img/products/dutch_gouda_blue_cheese.jpg"),
@@ -182,7 +182,7 @@ export const data = [
   {
     id: 19,
     name: "Duttch Leyden",
-    category: "dairy products",
+    category: "Dairy products",
     price: "16.00$",
     sale: "0$",
     image: require("./img/products/Duttch_Leyden_cheese.jpg"),
@@ -191,7 +191,7 @@ export const data = [
   {
     id: 20,
     name: "Feta - 20% fat",
-    category: "dairy products",
+    category: "Dairy products",
     price: "9.00$",
     sale: "0$",
     image: require("./img/products/feta_20_percent.jpg"),
@@ -200,7 +200,7 @@ export const data = [
   {
     id: 21,
     name: "Feta - 5% fat",
-    category: "dairy products",
+    category: "Dairy products",
     price: "9.00$",
     sale: "0$",
     image: require("./img/products/feta_cheese.jpg"),
@@ -209,7 +209,7 @@ export const data = [
   {
     id: 22,
     name: "Hard Cheddar",
-    category: "dairy products",
+    category: "Dairy products",
     price: "9.50$",
     sale: "0$",
     image: require("./img/products/hard_cheddar.jpg"),
@@ -218,7 +218,7 @@ export const data = [
   {
     id: 23,
     name: "Hard Cheddar",
-    category: "dairy products",
+    category: "Dairy products",
     price: "14.00$",
     sale: "13.00$",
     image: require("./img/products/la-bonne_vie_brie_cheese.jpg"),
@@ -227,7 +227,7 @@ export const data = [
   {
     id: 24,
     name: "Roquefort",
-    category: "dairy products",
+    category: "Dairy products",
     price: "12.00$",
     sale: "0$",
     image: require("./img/products/roquefort_cheese.jpg"),
@@ -236,7 +236,7 @@ export const data = [
   {
     id: 25,
     name: "Maple Glazed Ham",
-    category: "dairy products",
+    category: "Dairy products",
     price: "16.00$",
     sale: "15.50$",
     image: require("./img/products/Shenley_Station_blue.jpg"),
@@ -245,7 +245,7 @@ export const data = [
   {
     id: 26,
     name: "Tomme de Savoie",
-    category: "dairy products",
+    category: "Dairy products",
     price: "18.00$",
     sale: "0$",
     image: require("./img/products/Tomme_de_Savoie_cheese.jpg"),
@@ -254,7 +254,7 @@ export const data = [
   {
     id: 27,
     name: "Probiotic Brie",
-    category: "dairy products",
+    category: "Dairy products",
     price: "15.00$",
     sale: "14.50$",
     image: require("./img/products/Probiotic_Brie_cheese.jpg"),
@@ -263,7 +263,7 @@ export const data = [
   {
     id: 28,
     name: "Ribeye",
-    category: "fresh meat",
+    category: "Fresh meat",
     price: "12.00$",
     sale: "11.00$",
     image: require("./img/products/ribeye.jpg"),
@@ -272,7 +272,7 @@ export const data = [
   {
     id: 29,
     name: "Chicken Breast",
-    category: "fresh meat",
+    category: "Fresh meat",
     price: "7.00$",
     sale: "0$",
     image: require("./img/products/chicken_breast.jpg"),
@@ -281,7 +281,7 @@ export const data = [
   {
     id: 30,
     name: "chicken Legs",
-    category: "fresh meat",
+    category: "Fresh meat",
     price: "6.50$",
     sale: "0$",
     image: require("./img/products/fresh_chicken_legs.jpg"),
@@ -290,7 +290,7 @@ export const data = [
   {
     id: 31,
     name: "Chicken Wings",
-    category: "fresh meat",
+    category: "Fresh meat",
     price: "6.00$",
     sale: "0$",
     image: require("./img/products/fresh_Chicken_wings.jpg"),
@@ -299,7 +299,7 @@ export const data = [
   {
     id: 32,
     name: "Maple Glazed Ham",
-    category: "fresh meat",
+    category: "Fresh meat",
     price: "12.00$",
     sale: "11.00$",
     image: require("./img/products/fresh_lamb_chops.jpg"),
@@ -308,7 +308,7 @@ export const data = [
   {
     id: 33,
     name: "Lamb Ribs",
-    category: "fresh meat",
+    category: "Fresh meat",
     price: "9.00$",
     sale: "0$",
     image: require("./img/products/fresh_lamb_ribs.png"),
@@ -317,7 +317,7 @@ export const data = [
   {
     id: 34,
     name: "Pork Chop",
-    category: "fresh meat",
+    category: "Fresh meat",
     price: "9.00$",
     sale: "0$",
     image: require("./img/products/fresh_pork_chop.jpg"),
@@ -326,7 +326,7 @@ export const data = [
   {
     id: 35,
     name: "Pork Ribs",
-    category: "fresh meat",
+    category: "Fresh meat",
     price: "8.00$",
     sale: "0$",
     image: require("./img/products/fresh_pork_ribs.jpg"),
@@ -335,7 +335,7 @@ export const data = [
   {
     id: 36,
     name: "Turkey Breast",
-    category: "fresh meat",
+    category: "Fresh meat",
     price: "7.00$",
     sale: "0$",
     image: require("./img/products/fresh_turkey_breast.jpg"),
@@ -344,7 +344,7 @@ export const data = [
   {
     id: 37,
     name: "Whole Turkey",
-    category: "fresh meat",
+    category: "Fresh meat",
     price: "6.00$",
     sale: "0$",
     image: require("./img/products/fresh_whole-turkey.jpg"),
@@ -353,7 +353,7 @@ export const data = [
   {
     id: 38,
     name: "Whole Chicken",
-    category: "fresh meat",
+    category: "Fresh meat",
     price: "6.00$",
     sale: "0$",
     image: require("./img/products/fresh_Whole_Chicken.jpg"),

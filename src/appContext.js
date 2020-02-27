@@ -9,9 +9,40 @@ const ContextProvider = props => {
   const [activePath, setActivePath] = useState(path);
   const [category, setCategory] = useState("");
   const [cart, setCart] = useState([]);
+  const [message, setMessage] = useState("");
 
-  const addToCart = p => {
-    setCart([...cart, p]);
+  const updateCart = order => {
+    let newArray = [];
+    newArray = cart.filter(p => p.productId !== order.productId);
+    console.log(" [in IF] order.amount :" + order.amount);
+
+    setCart([...newArray, order]);
+  };
+  const updateSubTotalCart = order => {
+    if (order.amount > 1) {
+      let newArray = [];
+      newArray = cart.filter(p => p.productId !== order.productId);
+      setCart([...newArray, order]);
+    } else {
+      setCart([...cart, order]);
+    }
+
+    cart.forEach((p, index) => {
+      console.log(
+        "index :" +
+          index +
+          "category :" +
+          p.category +
+          " | productId :" +
+          p.productId +
+          " | productName :" +
+          p.productName +
+          " | sum :" +
+          p.sum +
+          " | amount :" +
+          p.amount
+      );
+    });
   };
 
   useEffect(() => {
@@ -26,7 +57,10 @@ const ContextProvider = props => {
         category,
         setCategory,
         cart,
-        addToCart
+        updateCart,
+        updateSubTotalCart,
+        message,
+        setMessage
       }}
     >
       {props.children}

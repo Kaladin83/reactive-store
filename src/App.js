@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //Components
 import Home from "./components/Home";
 import Categories from "./components/Categories";
 import Sales from "./components/Sales";
+import Cart from "./components/Cart";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import Products from "./components/Products";
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/categories" component={Categories} />
           <Route exact path="/sales" component={Sales} />
+          <Route exact path="/cart" component={Cart} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/products" component={Products} />
         </Switch>

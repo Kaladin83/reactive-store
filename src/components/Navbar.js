@@ -12,10 +12,10 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      <ul>
+      <ul className="float-left">
         <li onClick={() => setActivePath("/")}>
           <Link
-            className={activePath === "/" ? "links focused" : "links"}
+            className={activePath === "/" ? "links focused left" : "links left"}
             to="/"
           >
             <span className="padding">Home</span>
@@ -38,14 +38,26 @@ function Navbar() {
           </Link>
         </li>
       </ul>
-      <div onClick={() => setActivePath("login")} className="float-right">
-        <Link
-          className={activePath === "login" ? "links focused" : "links"}
-          to="/login"
-        >
-          <span className="padding">Login</span>
-        </Link>
-      </div>
+      <div className="middle" />
+      <ul className="float-right">
+        <li onClick={() => setActivePath("cart")}>
+          <Link
+            className={activePath === "cart" ? "links focused" : "links"}
+            to="/cart"
+          >
+            <span>My Cart</span>&nbsp;&nbsp;
+            <i className="fa fa-shopping-cart"></i>
+          </Link>
+        </li>
+        <li onClick={() => setActivePath("login")}>
+          <Link
+            className={activePath === "login" ? "links focused" : "links"}
+            to="/login"
+          >
+            <span className="padding">Login</span>
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 }

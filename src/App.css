@@ -5,27 +5,46 @@ font-family: 'Unna', serif; */
 body {
   background: linear-gradient(to right, rgb(35, 32, 49), rgb(206, 217, 245));
 }
+
 .navbar {
   background-color: rgba(223, 252, 234, 0.5);
   height: 5rem;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
   font-size: 1.1rem;
+  vertical-align: middle;
 }
 
-.navbar ul {
+.navbar .middle {
+  flex: 62%;
+}
+
+.float-left {
+  vertical-align: middle;
+  float: left;
   display: flex;
-  width: max-content;
-  align-items: center;
-  justify-content: center;
+  flex: 22%;
+  margin-left: 2rem;
+}
+
+.float-right {
+  margin-right: 2rem;
+  display: flex;
+  float: right;
+  margin-left: 2rem;
+  flex: 16%;
+  vertical-align: middle;
+}
+
+.left {
+  float: left;
 }
 
 .navbar ul li {
-  margin: 0 1.7rem;
+  margin-left: 2.3rem;
   text-decoration: none;
   list-style: none;
+  vertical-align: middle;
 }
 
 .focused {
@@ -34,10 +53,6 @@ body {
   border: 1.5px;
   border-style: solid;
   border-radius: 50%;
-}
-
-.float-right {
-  float: right;
 }
 
 .center {
@@ -50,6 +65,7 @@ body {
   padding: 12px 7px 12px 7px;
   color: rgb(48, 100, 83);
   font-weight: 600;
+  float: left;
 }
 
 .links:focus {
@@ -62,8 +78,15 @@ body {
 
 .links:hover {
   color: white;
+  padding: 12px 7px 12px 7px;
   background-color: rgb(73, 177, 142);
   border-radius: 50%;
+}
+
+.margin {
+  color: rgb(34, 85, 68);
+  margin: 0px 150px;
+  /* float: right; */
 }
 
 .background-img {
@@ -174,8 +197,9 @@ body {
 
 .product-details {
   position: absolute;
+  visibility: hidden;
   width: 380px;
-  bottom: 0;
+  bottom: 45px;
   height: 0px;
   -webkit-transition: all 0.4s linear;
   -moz-transition: all 0.4s linear;
@@ -197,13 +221,25 @@ body {
 }
 
 .product-card:hover .product-details {
-  height: 100px;
+  height: 90px;
   top: initial;
   bottom: 0;
+  visibility: visible;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
 }
 
 .product-card:hover .product-description {
   visibility: hidden;
+  height: 0px;
+  bottom: initial;
+  bottom: 30px;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
 }
 
 .product-card img {
@@ -212,12 +248,29 @@ body {
   object-fit: cover;
 }
 
+.product-details .description {
+  position: absolute;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: black;
+  font-family: "Unna", serif;
+  width: 380px;
+  text-align: center;
+  top: 15px;
+}
+
 .order {
-  visibility: hidden;
   position: absolute;
   display: inline-block;
-  bottom: 5px;
+
+  visibility: hidden;
   width: 380px;
+  bottom: 10px;
+  height: 0px;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
 }
 
 .order-amount {
@@ -268,7 +321,7 @@ body {
   position: absolute;
   left: 10px;
   bottom: 0.2px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
   font-family: "Unna", serif;
 }
@@ -276,18 +329,36 @@ body {
 .product-description {
   position: absolute;
   height: 60px;
-  bottom: 0;
   width: 380px;
+  bottom: 0px;
+  right: 0px;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
-.product-description h3 {
+.top-product-description {
   position: absolute;
+  width: 380px;
+}
+
+.top-product-description .title {
+  position: absolute;
+  width: 300px;
+  height: 30px;
   color: white;
   left: 10px;
-  bottom: 5px;
+  top: 3px;
   font-size: 1.3rem;
+}
+
+.top-product-description .indicator {
+  position: absolute;
+  background-color: transparent;
+  top: 10px;
+  right: 10px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
 }
 
 .price {
@@ -296,7 +367,7 @@ body {
   width: 60px;
   bottom: 0px;
   right: 10px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: right;
 }
 
@@ -306,7 +377,7 @@ body {
   left: -70px;
   bottom: 0px;
   text-decoration: line-through;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: right;
 }
 
@@ -319,5 +390,126 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
+  font-family: "Unna", serif;
+}
+
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: rgba(0, 0, 0, 0.6); /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 10px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+.cart-container {
+  margin: auto;
+  margin-top: 5rem;
+  padding: 2rem 1.4rem;
+
+  width: 35rem;
+  height: 40rem;
+  border: 1.6px;
+  border-radius: 8px;
+  background-color: rgba(223, 252, 234, 0.5);
+}
+
+.cart-title {
+  margin: 0px auto;
+  font-size: 2.2rem;
+  font-family: "Kaushan Script", cursive;
+  background: linear-gradient(to right, rgb(40, 52, 161), rgb(120, 152, 223));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.cart-category-and-items {
+  width: 100%;
+}
+
+.cart-category-box {
+  border: 0.8px;
+  border-style: solid;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cart-object {
+  display: grid;
+  width: 430px;
+  grid-template-columns: 10px 160px 120px;
+  grid-column-gap: 30px;
+}
+
+.cart-category-name {
+  font-size: 1.5rem;
+  font-family: "Unna", serif;
+}
+
+.cart-item {
+  padding: 3px 0px;
+  font-size: 1.2rem;
   font-family: "Unna", serif;
 }
