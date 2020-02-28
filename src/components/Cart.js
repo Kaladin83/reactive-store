@@ -51,6 +51,9 @@ const Cart = () => {
                               <div className="cart-item">
                                 subtotal:&nbsp;{p.sum}$
                               </div>
+                              <div>
+                                <i class="fas fa-trash-alt"></i>
+                              </div>
                             </div>
                           );
                         }

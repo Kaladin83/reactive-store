@@ -3,7 +3,12 @@ font-family: 'Kaushan Script', cursive;
 font-family: 'Unna', serif; */
 
 body {
-  background: linear-gradient(to right, rgb(35, 32, 49), rgb(206, 217, 245));
+  background: linear-gradient(
+    to right,
+    rgb(35, 32, 49),
+    rgb(206, 217, 245),
+    rgb(35, 32, 49)
+  );
 }
 
 .navbar {
@@ -16,23 +21,25 @@ body {
 }
 
 .navbar .middle {
-  flex: 62%;
+  flex: 55%;
 }
 
 .float-left {
-  vertical-align: middle;
-  float: left;
+  padding: 0;
+  /* float: left; */
   display: flex;
-  flex: 22%;
+  justify-content: space-between;
+
+  flex: 26%;
   margin-left: 2rem;
 }
 
 .float-right {
+  padding: 0;
   margin-right: 2rem;
   display: flex;
-  float: right;
-  margin-left: 2rem;
-  flex: 16%;
+  /* float: right; */
+  flex: 19%;
   vertical-align: middle;
 }
 
@@ -41,14 +48,14 @@ body {
 }
 
 .navbar ul li {
-  margin-left: 2.3rem;
+  margin: 0 auto;
   text-decoration: none;
   list-style: none;
   vertical-align: middle;
 }
 
 .focused {
-  padding: 12px 7px 12px 7px;
+  padding: 0.5rem 0.9rem;
   border-color: rgb(34, 85, 68);
   border: 1.5px;
   border-style: solid;
@@ -61,15 +68,16 @@ body {
 }
 
 .links {
+  text-align: center;
   text-decoration: none;
-  padding: 12px 7px 12px 7px;
+  padding: 0.5rem 0.9rem;
   color: rgb(48, 100, 83);
   font-weight: 600;
   float: left;
 }
 
 .links:focus {
-  padding: 12px 7px 12px 7px;
+  padding: 0.5rem 0.9rem;
   border-color: rgb(73, 177, 142);
   border: 1.5px;
   border-style: solid;
@@ -78,16 +86,16 @@ body {
 
 .links:hover {
   color: white;
-  padding: 12px 7px 12px 7px;
+  padding: 0.5rem 0.9rem;
   background-color: rgb(73, 177, 142);
   border-radius: 50%;
 }
 
-.margin {
+/* .margin {
   color: rgb(34, 85, 68);
   margin: 0px 150px;
-  /* float: right; */
-}
+  /* float: right; 
+} */
 
 .background-img {
   max-width: 100%;
@@ -154,8 +162,8 @@ body {
 
 .category-card {
   position: relative;
-  max-height: 19rem;
-  max-width: 27rem;
+  max-height: 17rem;
+  max-width: 26rem;
   margin: auto;
   align-items: center;
   justify-content: center;
@@ -164,8 +172,8 @@ body {
 
 .category-card img {
   position: relative;
-  width: 27rem;
-  height: 19rem;
+  width: 26rem;
+  height: 17rem;
   object-fit: cover;
 }
 
@@ -178,7 +186,7 @@ body {
   bottom: 0px;
   height: 50px;
   right: 0;
-  width: 27rem;
+  width: 26rem;
   text-align: center;
   font-size: 2rem;
   background-color: rgba(0, 0, 0, 0.6);
@@ -398,7 +406,12 @@ body {
   margin-top: 2rem;
   font-size: 3rem;
   font-weight: 800;
-  background: linear-gradient(to right, rgb(246, 247, 236), rgb(48, 126, 96));
+  background: linear-gradient(
+    to right,
+    rgb(246, 247, 236),
+    rgb(48, 126, 96),
+    rgb(246, 247, 236)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -477,11 +490,10 @@ body {
 
 .cart-container {
   margin: auto;
-  margin-top: 5rem;
+  margin-top: 3rem;
   padding: 2rem 1.4rem;
-
-  width: 35rem;
-  height: 40rem;
+  width: 30rem;
+  height: 30rem;
   border: 1.6px;
   border-radius: 8px;
   background-color: rgba(223, 252, 234, 0.5);
@@ -489,9 +501,15 @@ body {
 
 .cart-title {
   margin: 0px auto;
+  margin-bottom: 2rem;
   font-size: 2.2rem;
   font-family: "Kaushan Script", cursive;
-  background: linear-gradient(to right, rgb(40, 52, 161), rgb(120, 152, 223));
+  background: linear-gradient(
+    to right,
+    rgb(189, 206, 243),
+    rgb(34, 45, 144),
+    rgb(189, 206, 243)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -503,22 +521,29 @@ body {
 }
 
 .cart-category-box {
-  border: 0.8px;
-  border-style: solid;
+  border: 1px;
+  border-style: inset;
+  border-radius: 14px;
   padding: 0.5rem;
   margin-bottom: 1rem;
 }
 
 .cart-object {
   display: grid;
-  width: 430px;
-  grid-template-columns: 10px 160px 120px;
-  grid-column-gap: 30px;
+  width: 28rem;
+  grid-template-columns: 0.3rem 13rem 8rem 0.3rem;
+  grid-column-gap: 2rem;
 }
 
 .cart-category-name {
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-top: 2rem;
+  width: inherit;
+  height: 4rem;
   font-size: 1.5rem;
+  text-align: center;
   font-family: "Unna", serif;
+  color: white;
 }
 
 .cart-item {
