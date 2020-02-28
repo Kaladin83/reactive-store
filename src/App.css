@@ -154,8 +154,8 @@ body {
 
 .category-card {
   position: relative;
-  max-height: 300px;
-  max-width: 450px;
+  max-height: 19rem;
+  max-width: 27rem;
   margin: auto;
   align-items: center;
   justify-content: center;
@@ -164,8 +164,8 @@ body {
 
 .category-card img {
   position: relative;
-  width: 450px;
-  height: 300px;
+  width: 27rem;
+  height: 19rem;
   object-fit: cover;
 }
 
@@ -178,7 +178,7 @@ body {
   bottom: 0px;
   height: 50px;
   right: 0;
-  width: 450px;
+  width: 27rem;
   text-align: center;
   font-size: 2rem;
   background-color: rgba(0, 0, 0, 0.6);
@@ -186,6 +186,16 @@ body {
   z-index: 1;
 }
 
+/* @media screen and (min-width: 40em) {
+  .products-container {
+    display: grid;
+    margin: 50px auto;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 2rem;
+  }
+} */
 .products-container {
   display: grid;
   margin: 50px auto;
@@ -198,7 +208,7 @@ body {
 .product-details {
   position: absolute;
   visibility: hidden;
-  width: 380px;
+  width: 19rem;
   bottom: 45px;
   height: 0px;
   -webkit-transition: all 0.4s linear;
@@ -211,13 +221,16 @@ body {
 
 .product-card {
   position: relative;
-  max-height: 280px;
-  max-width: 380px;
+  /* background-image: url("../src/img/products/Bleu_de_Gex_cheese.jpg"); */
+  width: 19rem;
   border: 2px solid #e7e7e7;
   border-radius: 4px;
   margin: 50px auto;
   align-items: center;
   justify-content: center;
+  /* background-size: cover;
+  display: flex;
+  align-items: flex-end; */
 }
 
 .product-card:hover .product-details {
@@ -243,8 +256,8 @@ body {
 }
 
 .product-card img {
-  height: 280px;
-  width: 380px;
+  height: 14rem;
+  width: 19rem;
   object-fit: cover;
 }
 
@@ -254,7 +267,7 @@ body {
   font-weight: 600;
   color: black;
   font-family: "Unna", serif;
-  width: 380px;
+  width: 19rem;
   text-align: center;
   top: 15px;
 }
@@ -264,7 +277,7 @@ body {
   display: inline-block;
 
   visibility: hidden;
-  width: 380px;
+  width: 19rem;
   bottom: 10px;
   height: 0px;
   -webkit-transition: all 0.4s linear;
@@ -329,7 +342,7 @@ body {
 .product-description {
   position: absolute;
   height: 60px;
-  width: 380px;
+  width: 19rem;
   bottom: 0px;
   right: 0px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -338,12 +351,12 @@ body {
 
 .top-product-description {
   position: absolute;
-  width: 380px;
+  max-width: 19rem;
 }
 
 .top-product-description .title {
   position: absolute;
-  width: 300px;
+  width: 17rem;
   height: 30px;
   color: white;
   left: 10px;
@@ -382,8 +395,8 @@ body {
 }
 
 .category-header {
-  margin-top: 3rem;
-  font-size: 4rem;
+  margin-top: 2rem;
+  font-size: 3rem;
   font-weight: 800;
   background: linear-gradient(to right, rgb(246, 247, 236), rgb(48, 126, 96));
   -webkit-background-clip: text;
