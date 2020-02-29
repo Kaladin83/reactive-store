@@ -29,18 +29,24 @@ const Cart = () => {
     console.log("index :" + index + " || name :" + e);
   });
 
+  const handleDelete = productId => {
+    console.log("In handleDelete: productId :" + productId);
+  };
+
   return (
     <div className="cart-container">
       <div className="cart-title">My cart</div>
       {categories.map(c => {
         return (
-          <section className="cart-category-and-items" key={index}>
+          <section className="cart-category-and-items" key={c.id}>
             {existingCategories
               .filter(e => e === c.name)
-              .map(e => {
+              .map((e, index) => {
                 return (
                   <>
-                    <div className="cart-category-name">{c.name}</div>
+                    <div className="cart-category-name">
+                      {c.name} key={index}
+                    </div>
                     <div className="cart-category-box">
                       {cart.map(p => {
                         if (c.name === p.category) {
@@ -51,8 +57,11 @@ const Cart = () => {
                               <div className="cart-item">
                                 subtotal:&nbsp;{p.sum}$
                               </div>
-                              <div>
-                                <i class="fas fa-trash-alt"></i>
+                              <div
+                                className="delete-button"
+                                onClick={() => handleDelete(p.productId)}
+                              >
+                                <i className="fas fa-trash-alt"></i>
                               </div>
                             </div>
                           );

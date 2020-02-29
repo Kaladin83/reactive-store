@@ -2,7 +2,11 @@
 font-family: 'Kaushan Script', cursive;
 font-family: 'Unna', serif; */
 
+html,
 body {
+  width: 100%;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
   background: linear-gradient(
     to right,
     rgb(35, 32, 49),
@@ -15,13 +19,53 @@ body {
   background-color: rgba(223, 252, 234, 0.5);
   height: 5rem;
   display: flex;
+  width: 100%;
+}
+
+.navbar-links {
+  visibility: hidden;
+  width: 100%;
+  display: flex;
   flex-direction: row;
   font-size: 1.1rem;
   vertical-align: middle;
 }
 
-.navbar .middle {
-  flex: 55%;
+.hamburger-icon {
+  visibility: hidden;
+  position: absolute;
+  left: 1.2rem;
+  top: 1.2rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.bar {
+  background: linear-gradient(
+    to right,
+    rgb(35, 32, 49),
+    rgb(206, 217, 245),
+    rgb(35, 32, 49)
+  );
+  width: 100%;
+  height: 4px;
+  border-radius: 0.9rem;
+}
+.bar.half {
+  width: 50%;
+}
+
+.bar.end {
+  align-self: flex-end;
+}
+
+.middle {
+  flex: 35%;
 }
 
 .float-left {
@@ -30,7 +74,7 @@ body {
   display: flex;
   justify-content: space-between;
 
-  flex: 26%;
+  flex: 37rem;
   margin-left: 2rem;
 }
 
@@ -39,15 +83,35 @@ body {
   margin-right: 2rem;
   display: flex;
   /* float: right; */
-  flex: 19%;
+  flex: 24rem;
   vertical-align: middle;
+}
+
+@media only screen and (min-width: 0px) {
+  .navbar-links {
+    visibility: hidden;
+  }
+
+  .hamburger-icon {
+    visibility: visible;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .navbar-links {
+    visibility: visible;
+  }
+
+  .hamburger-icon {
+    visibility: hidden;
+  }
 }
 
 .left {
   float: left;
 }
 
-.navbar ul li {
+.navbar-links ul li {
   margin: 0 auto;
   text-decoration: none;
   list-style: none;
@@ -97,7 +161,14 @@ body {
   /* float: right; 
 } */
 
+/* .home-container {
+  width: 100%;
+  height: 100%;
+  filter: brightness(40%);
+} */
+
 .background-img {
+  position: relative;
   max-width: 100%;
   max-height: 100%;
   filter: brightness(40%);
@@ -106,7 +177,7 @@ body {
 .home-title {
   position: absolute;
   top: 35%;
-  left: 50%;
+  left: 35%;
   font-size: 8rem;
   text-transform: uppercase;
   color: white;
@@ -129,8 +200,8 @@ body {
 }
 
 .main-choice {
-  width: 450px;
-  height: 300px;
+  width: 20rem;
+  height: 16rem;
   object-fit: cover;
 }
 
@@ -149,6 +220,67 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   z-index: 1;
+}
+
+@media only screen and (min-width: 0px) {
+  .home-title {
+    top: 15%;
+    left: 15%;
+    font-size: 5rem;
+  }
+
+  .main-choices {
+    top: 50%;
+    left: 10%;
+    grid-template-columns: 1fr;
+    row-gap: 10rem;
+  }
+
+  .main-choice {
+    width: 20rem;
+    height: 12rem;
+
+    object-fit: cover;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .home-title {
+    top: 25%;
+    left: 20%;
+    font-size: 6rem;
+  }
+
+  .main-choices {
+    top: 70%;
+    left: 10%;
+    grid-template-columns: 18rem 8rem 18rem;
+  }
+
+  .main-choice {
+    width: 18rem;
+    height: 14rem;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .home-title {
+    top: 35%;
+    left: 25%;
+    font-size: 8rem;
+  }
+
+  .main-choices {
+    top: 90%;
+    left: 10%;
+    grid-template-columns: 32rem 4rem 32rem;
+  }
+
+  .main-choice {
+    width: 25rem;
+    height: 17rem;
+    object-fit: cover;
+  }
 }
 
 .categories-container {
@@ -229,16 +361,12 @@ body {
 
 .product-card {
   position: relative;
-  /* background-image: url("../src/img/products/Bleu_de_Gex_cheese.jpg"); */
   width: 19rem;
   border: 2px solid #e7e7e7;
   border-radius: 4px;
   margin: 50px auto;
   align-items: center;
   justify-content: center;
-  /* background-size: cover;
-  display: flex;
-  align-items: flex-end; */
 }
 
 .product-card:hover .product-details {
@@ -550,4 +678,9 @@ body {
   padding: 3px 0px;
   font-size: 1.2rem;
   font-family: "Unna", serif;
+}
+
+.delete-button {
+  color: red;
+  cursor: pointer;
 }
