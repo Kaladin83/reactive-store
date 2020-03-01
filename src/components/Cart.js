@@ -3,7 +3,7 @@ import { categories } from "../data";
 import { appContext } from "../appContext";
 
 const Cart = () => {
-  const { cart } = useContext(appContext);
+  const { cart, deleteFromCart } = useContext(appContext);
 
   let existingCategories = [];
   let index = 0;
@@ -29,10 +29,6 @@ const Cart = () => {
     console.log("index :" + index + " || name :" + e);
   });
 
-  const handleDelete = productId => {
-    console.log("In handleDelete: productId :" + productId);
-  };
-
   return (
     <div className="cart-container">
       <div className="cart-title">My cart</div>
@@ -44,8 +40,9 @@ const Cart = () => {
               .map((e, index) => {
                 return (
                   <>
-                    <div className="cart-category-name">
-                      {c.name} key={index}
+                    <div className="cart-category-name" key={index}>
+                      <div className="cart-category-text">{c.name} </div>
+                      <img src={c.image} />
                     </div>
                     <div className="cart-category-box">
                       {cart.map(p => {
@@ -59,7 +56,7 @@ const Cart = () => {
                               </div>
                               <div
                                 className="delete-button"
-                                onClick={() => handleDelete(p.productId)}
+                                onClick={() => deleteFromCart(p.productId)}
                               >
                                 <i className="fas fa-trash-alt"></i>
                               </div>

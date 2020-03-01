@@ -18,6 +18,7 @@ const ContextProvider = props => {
 
     setCart([...newArray, order]);
   };
+
   const updateSubTotalCart = order => {
     if (order.amount > 1) {
       let newArray = [];
@@ -45,6 +46,12 @@ const ContextProvider = props => {
     });
   };
 
+  const deleteFromCart = id => {
+    let arr = [];
+    arr = cart.filter(p => p.productId !== id);
+    setCart(arr);
+  };
+
   useEffect(() => {
     console.log("In use effect of Context: ");
   }, []);
@@ -59,6 +66,7 @@ const ContextProvider = props => {
         cart,
         updateCart,
         updateSubTotalCart,
+        deleteFromCart,
         message,
         setMessage
       }}

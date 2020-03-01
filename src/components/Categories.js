@@ -14,7 +14,7 @@ const Categories = () => {
   };
 
   return (
-    <div className="categories-container ">
+    <div className="categories-container">
       {categories.map((c, index) => {
         return (
           <div key={index} className="category-card">

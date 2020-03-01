@@ -1,7 +1,7 @@
 export const otherImages = [
   "assets/img/other/home_onsales.gif",
   "assets/img/other/home_product-categories.jpg",
-  "assets/img/other/other/home_women-in-supermarket-1.jpg"
+  "assets/img/other/home_women-in-supermarket-1.jpg"
 ];
 
 export const categories = [

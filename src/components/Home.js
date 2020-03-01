@@ -13,32 +13,29 @@ const Home = () => {
   }, []);
 
   return (
-    <div
-      className="home-container"
-      style={{
-        background: "url('" + otherImages[2] + "')"
-      }}
-    >
-      {/* <img src={otherImages[2]} alt="background" className="background-img" /> */}
+    <div className="home-container">
+      <img src={otherImages[2]} alt="background" className="background-img" />
       <div className="home-title">My Supermarket</div>
       <div className="main-choices">
-        <Link to="/sales">
-          <img
-            src={otherImages[0]}
-            alt="background"
-            className="main-choice grid-item-left"
-            onClick={() => setActivePath("sales")}
-          />
-        </Link>
-        <Link to="/categories">
-          <img
-            src={otherImages[1]}
-            alt="background"
-            onClick={() => setActivePath("categories")}
-            className="main-choice grid-item-right"
-          ></img>
-          <span>Categories</span>
-        </Link>
+        <div className="main-choice">
+          <Link to="/sales">
+            <img
+              src={otherImages[0]}
+              alt="background"
+              onClick={() => setActivePath("sales")}
+            />
+          </Link>
+        </div>
+        <div className="main-choice">
+          <Link to="/categories">
+            <img
+              src={otherImages[1]}
+              alt="background"
+              onClick={() => setActivePath("categories")}
+            />
+            <span>Categories</span>
+          </Link>
+        </div>
       </div>
     </div>
   );
